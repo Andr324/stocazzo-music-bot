@@ -1,12 +1,12 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
 
-
+client.login(process.env.token)
 const DisTube = require("distube") //Dopo aver fatto npm install distube
 
 const config = {
     prefix: "a!", //prefisso
-    token: "ODI0MDM5NzE1MDQ4NTIxNzQ5.YFpkyQ._7DNUTgHRWVadKhDGbVC8ybnv9U" //token
+    token: "process.env.token" //token
 }
 
 const distube = new DisTube(client, {
@@ -61,4 +61,3 @@ function embedbuilder(client, message, color, title, description, thumbnail) {
     return message.channel.send(embed)
 }
 
-client.login(ODMyNjUyNjAzMjM4MjUyNTc0.YHm6Kg.hll77IEW-0RN17n-jo85cDPSdcE)
